@@ -9,6 +9,8 @@
     <string name="word_guessing_game">Word Guessing Game</string>
     <string name="word_description">Word\nDescription</string>
     <!--Double Play Fragment    -->
+    <string name="couple_label">Couple Play</string>
+    <string name="single_label">Single Play</string>
     <string name="word_tittle">The word is</string>
     <string name="word">Word</string>
     <string name="score">Score: $d</string>
