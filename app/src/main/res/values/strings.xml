@@ -5,6 +5,7 @@
     <string name="title_text">Let\'s\n Guess Words</string>
     <string name="couple_play">Couple Play</string>
     <string name="single_play">Single Play</string>
+<!--Double Play Fragment    -->
     <string name="word_guessing_game">Word Guessing Game</string>
     <string name="word_description">Word\nDescription</string>
     <string name="word_tittle">The word is</string>
@@ -12,4 +13,7 @@
     <string name="score">Score: $d</string>
     <string name="skip_button">Skip</string>
     <string name="correct_button">Correct</string>
+    <!--Game Over Fragment -->
+    <string name="game_over">Game Over</string>
+    <string name="playAgain_button">Play Again</string>
 </resources>

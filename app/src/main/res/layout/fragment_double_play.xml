@@ -60,13 +60,8 @@
 
     <Button
         android:id="@+id/skipButton"
-        style="@style/ButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:backgroundTint="@color/red"
+        style="@style/SkipButtonStyle"
         android:text="@string/skip_button"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/correctButton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -77,11 +72,7 @@
 
     <Button
         android:id="@+id/correctButton"
-        style="@style/ButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/darker_green"
+        style="@style/CorrectButtonStyle"
         android:text="@string/correct_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
