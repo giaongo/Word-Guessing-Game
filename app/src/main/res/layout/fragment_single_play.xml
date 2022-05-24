@@ -1,120 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".game.SinglePlayFragment"
-    android:background="@color/green">
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".game.SinglePlayFragment"
+        android:background="@color/green">
 
-    <TextView
-        android:id="@+id/description_title"
-        style="@style/FontText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="@string/word_description"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/description_title"
+            style="@style/FontText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/word_description"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.544"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:textSize="@dimen/normal_text"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/description_title"
-        app:layout_constraintHorizontal_bias="0.544"
-        app:layout_constraintStart_toStartOf="@+id/description_title"
-        app:layout_constraintTop_toBottomOf="@+id/description_title"
-        tools:text="“What kind of animal that lives in a wide range in sub-Saharan Africa, in some parts of Western and Central Asia, Southern Russia, and on the Indian subcontinent to Southeast and East Asia.”" />
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textSize="@dimen/normal_text"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/description_title"
+            app:layout_constraintHorizontal_bias="0.544"
+            app:layout_constraintStart_toStartOf="@+id/description_title"
+            app:layout_constraintTop_toBottomOf="@+id/description_title"
+            tools:text="“What kind of animal that lives in a wide range in sub-Saharan Africa, in some parts of Western and Central Asia, Southern Russia, and on the Indian subcontinent to Southeast and East Asia.”" />
 
-    <TextView
-        android:id="@+id/guess"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/guess"
-        android:textColor="@color/black"
-        android:textSize="@dimen/sub_title"
-        app:layout_constraintEnd_toEndOf="@+id/description"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/description"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
+        <TextView
+            android:id="@+id/guess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/guess"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sub_title"
+            app:layout_constraintEnd_toEndOf="@+id/description"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/description"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
 
-    <EditText
-        android:id="@+id/editTextGuess"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:textAlignment="center"
-        android:inputType="textPersonName"
-        android:padding="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/guess"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="@+id/guess"
-        app:layout_constraintTop_toBottomOf="@+id/guess"
-        android:hint="@string/guess_text"
-        android:autofillHints="guess"/>
+        <EditText
+            android:id="@+id/editTextGuess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:textAlignment="center"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/guess"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="@+id/guess"
+            app:layout_constraintTop_toBottomOf="@+id/guess"
+            android:hint="@string/guess_text"
+            android:autofillHints="guess"/>
 
-    <TextView
-        android:id="@+id/timeSingle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/imprima"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextGuess"
-        app:layout_constraintStart_toStartOf="@+id/editTextGuess"
-        app:layout_constraintTop_toBottomOf="@+id/editTextGuess"
-        tools:text="00:00" />
+        <TextView
+            android:id="@+id/timeSingle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/imprima"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextGuess"
+            app:layout_constraintStart_toStartOf="@+id/editTextGuess"
+            app:layout_constraintTop_toBottomOf="@+id/editTextGuess"
+            tools:text="00:00" />
 
-    <TextView
-        android:id="@+id/scoreSingle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/imprima"
-        android:text="@string/score"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="@+id/timeSingle"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="@+id/timeSingle"
-        app:layout_constraintTop_toBottomOf="@+id/timeSingle" />
+        <TextView
+            android:id="@+id/scoreSingle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/imprima"
+            android:text="@string/score"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="@+id/timeSingle"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="@+id/timeSingle"
+            app:layout_constraintTop_toBottomOf="@+id/timeSingle" />
 
-    <Button
-        android:id="@+id/skipButton"
-        style="@style/SkipButtonStyle"
-        android:text="@string/skip_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/correctButton"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.455" />
+        <Button
+            android:id="@+id/skipButton"
+            style="@style/SkipButtonStyle"
+            android:text="@string/skip_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/correctButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2"
+            app:layout_constraintVertical_bias="0.455" />
 
-    <Button
-        android:id="@+id/correctButton"
-        style="@style/CorrectButtonStyle"
-        android:text="@string/correct_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/skipButton"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.455" />
+        <Button
+            android:id="@+id/correctButton"
+            style="@style/CorrectButtonStyle"
+            android:text="@string/correct_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/skipButton"
+            app:layout_constraintTop_toTopOf="@+id/guideline2"
+            app:layout_constraintVertical_bias="0.455" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.81" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.81" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

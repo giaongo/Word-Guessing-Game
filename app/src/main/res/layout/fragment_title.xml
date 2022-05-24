@@ -1,48 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/yellow"
-    tools:context=".title.TitleFragment">
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/yellow"
+        tools:context=".title.TitleFragment">
 
-    <TextView
-        android:id="@+id/titleText"
-        style="@style/FontText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title_text"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/titleText"
+            style="@style/FontText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_text"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/couplePlay"
-        style="@style/ButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="@color/dark_blue"
-        android:text="@string/couple_play"
-        app:layout_constraintEnd_toEndOf="@+id/titleText"
-        app:layout_constraintStart_toStartOf="@+id/titleText"
-        app:layout_constraintTop_toBottomOf="@+id/titleText" />
+        <Button
+            android:id="@+id/couplePlay"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/dark_blue"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/couple_play"
+            app:layout_constraintEnd_toEndOf="@+id/titleText"
+            app:layout_constraintStart_toStartOf="@+id/titleText"
+            app:layout_constraintTop_toBottomOf="@+id/titleText" />
 
-    <Button
-        android:id="@+id/singlePlay"
-        style="@style/ButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="@color/darker_green"
-        android:text="@string/single_play"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/couplePlay"
-        app:layout_constraintStart_toStartOf="@+id/couplePlay"
-        app:layout_constraintTop_toBottomOf="@+id/couplePlay"
-        app:layout_constraintVertical_bias="0.0" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/singlePlay"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/darker_green"
+            android:textStyle="bold"
+            android:text="@string/single_play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/couplePlay"
+            app:layout_constraintStart_toStartOf="@+id/couplePlay"
+            app:layout_constraintTop_toBottomOf="@+id/couplePlay"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
