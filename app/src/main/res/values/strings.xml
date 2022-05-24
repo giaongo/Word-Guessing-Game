@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Word Guessing Game</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_text">Let\'s\n Guess Words</string>
+    <string name="couple_play">Couple Play</string>
+    <string name="single_play">Single Play</string>
+    <string name="word_guessing_game">Word Guessing Game</string>
+    <string name="word_description">Word\nDescription</string>
+    <string name="word_tittle">The word is</string>
+    <string name="word">Word</string>
+    <string name="score">Score: $d</string>
+    <string name="skip_button">Skip</string>
+    <string name="correct_button">Correct</string>
 </resources>
