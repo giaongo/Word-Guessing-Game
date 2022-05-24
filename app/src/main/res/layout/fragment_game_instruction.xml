@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".title.GameInstructionFragment">
+
+    <TextView
+        android:id="@+id/gameInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontText"
+        android:text="@string/game_instruction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/couplePlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:textSize="@dimen/sub_title"
+        android:text="@string/couple_play"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/gameInstruction"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/gameInstruction"
+        app:layout_constraintTop_toBottomOf="@+id/gameInstruction" />
+
+    <TextView
+        android:id="@+id/couplePlayInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/couple_play_instruction"
+        app:layout_constraintEnd_toEndOf="@+id/couplePlay"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/couplePlay"
+        app:layout_constraintTop_toBottomOf="@+id/couplePlay"
+        android:padding="20dp"
+        android:justificationMode="inter_word"/>
+
+    <TextView
+        android:id="@+id/singlePlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/couple_play"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sub_title"
+        app:layout_constraintEnd_toEndOf="@+id/couplePlayInstruction"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/couplePlayInstruction"
+        app:layout_constraintTop_toBottomOf="@+id/couplePlayInstruction" />
+
+    <TextView
+        android:id="@+id/singlePlayInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:text="@string/single_play_instruction"
+        app:layout_constraintEnd_toEndOf="@+id/singlePlay"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/singlePlay"
+        app:layout_constraintTop_toBottomOf="@+id/singlePlay"
+        android:padding="20dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
