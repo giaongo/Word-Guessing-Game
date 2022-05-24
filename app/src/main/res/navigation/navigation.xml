@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="fi.giao.wordguessinggame.title.TitleFragment"
+        android:label="@string/word_guessing_game" >
+        <action
+            android:id="@+id/action_titleFragment_to_doublePlayFragment"
+            app:destination="@id/doublePlayFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_singlePlayFragment"
+            app:destination="@id/singlePlayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doublePlayFragment"
+        android:name="fi.giao.wordguessinggame.game.DoublePlayFragment"
+        android:label="@string/couple_play"
+        tools:layout="@layout/fragment_double_play" >
+        <action
+            android:id="@+id/action_doublePlayFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:popUpTo="@id/doublePlayFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/singlePlayFragment"
+        android:name="fi.giao.wordguessinggame.game.SinglePlayFragment"
+        android:label="@string/single_play"
+        tools:layout="@layout/fragment_single_play" >
+        <action
+            android:id="@+id/action_singlePlayFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:popUpTo="@id/singlePlayFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="fi.giao.wordguessinggame.score.GameOverFragment"
+        android:label="GameOverFragment" >
+        <action
+            android:id="@+id/action_gameOverFragment_to_titleFragment"
+            app:destination="@id/titleFragment"
+            app:popUpTo="@id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameInstructionFragment"
+        android:name="fi.giao.wordguessinggame.title.GameInstructionFragment"
+        android:label="GameInstructionFragment" />
+</navigation>
