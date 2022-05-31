@@ -13,7 +13,7 @@
     <string name="single_label">Single Play</string>
     <string name="word_tittle">The word is</string>
     <string name="word">Word</string>
-    <string name="score">Score: $d</string>
+    <string name="score">Score: %1$d</string>
     <string name="skip_button">Skip</string>
     <string name="correct_button">Correct</string>
     <!--Game Over Fragment -->
