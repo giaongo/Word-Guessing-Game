@@ -1,15 +1,15 @@
 package fi.giao.wordguessinggame.game
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import fi.giao.wordguessinggame.R
 import fi.giao.wordguessinggame.database.WordDatabase
 import fi.giao.wordguessinggame.database.WordRepository
@@ -34,10 +34,12 @@ class DoublePlayFragment : Fragment() {
         })
         wordViewModel.score.observe(viewLifecycleOwner, Observer {
             binding.scoreDouble.text = requireActivity().getString(R.string.score,it)
+            if(it ==  5) {
+                findNavController().navigate(DoublePlayFragmentDirections.actionDoublePlayFragmentToGameOverFragment(it))
+            }
         })
         onCorrectButtonClicked()
         onSkipButtonClick()
-
         return binding.root
     }
     private fun  onCorrectButtonClicked() {
@@ -50,4 +52,5 @@ class DoublePlayFragment : Fragment() {
             wordViewModel.onSkip()
         }
     }
+
 }

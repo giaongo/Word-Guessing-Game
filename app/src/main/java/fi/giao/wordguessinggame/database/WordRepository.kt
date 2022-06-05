@@ -11,6 +11,5 @@ class WordRepository private constructor(private val wordDao: WordDao)  {
         }
     }
 
-    suspend fun upsert(item: WordItem) = wordDao.upsert(item)
     fun getAllWordItems() = wordDao.getAllWords()
 }

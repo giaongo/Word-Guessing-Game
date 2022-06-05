@@ -8,9 +8,6 @@ import androidx.room.Query
 
 @Dao
 interface WordDao {
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun upsert(word:WordItem)
-
     @Query("SELECT * FROM word_items")
     fun getAllWords(): List<WordItem>
 }

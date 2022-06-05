@@ -17,6 +17,5 @@ abstract class WordDatabase : RoomDatabase() {
         }
         private fun createDatabase(context: Context) = Room.databaseBuilder(context.applicationContext,
         WordDatabase::class.java,"word_database").createFromAsset("database/word.db").allowMainThreadQueries().build()
-
     }
  }
