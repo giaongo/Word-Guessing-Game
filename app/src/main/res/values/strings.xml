@@ -23,8 +23,8 @@
     <string name="guess_text">Enter your guess</string>
     <!--Game Instruction  fragment-->
     <string name="game_instruction">Instructions</string>
-    <string name="couple_play_instruction">Hold your phone horizontally and its back camera toward you while its front toward your parner. Your partner has to look at the text from the screen and describe its in a way that you can guess the word correctly. Each correct guess is worth 1 point and the game is over after 2 minutes.</string>
-    <string name="single_play_instruction">You have to guess and enter the correct word based on the brief describtion displayed on the screen. Each correct answer is worth 1 point and the game ends after 2 minutes.</string>
+    <string name="couple_play_instruction">Hold your phone horizontally and its back camera toward you while its front toward your partner. Your partner has to look at the text from the screen and describe its in a way that you can guess the word correctly. Each correct guess is worth 1 point and the game is over after 2 minutes.</string>
+    <string name="single_play_instruction">You have to guess and enter the correct word based on the brief description displayed on the screen. Each correct answer is worth 1 point and the game ends after 2 minutes.</string>
 
     <!--Single Play Fragment -->
     <string name="check_btn">Check Guess</string>
