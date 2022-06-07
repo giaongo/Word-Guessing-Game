@@ -52,7 +52,7 @@
             app:layout_constraintTop_toBottomOf="@+id/description" />
 
         <TextView
-            android:id="@+id/timeSingle"
+            android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="68dp"
@@ -74,7 +74,7 @@
             android:text="@string/score"
             android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/timeSingle"
+            app:layout_constraintEnd_toEndOf="@+id/time"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextGuess"

@@ -2,19 +2,22 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".score.GameOverFragment"
-        android:background="@color/pink">
+        android:background="@color/pink"
+        tools:context=".score.GameOverFragment">
 
         <TextView
             android:id="@+id/gameOver"
             style="@style/FontText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
             android:text="@string/game_over"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,13 +25,12 @@
             android:id="@+id/scoreFinal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
-            android:text="@string/score"
+            android:layout_marginTop="44dp"
             android:fontFamily="@font/imprima"
+            android:text="@string/score"
             android:textSize="25sp"
-            app:layout_constraintEnd_toEndOf="@+id/gameOver"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="@+id/gameOver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gameOver" />
 
         <Button
@@ -36,11 +38,15 @@
             style="@style/ButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="52dp"
+            android:backgroundTint="@color/white"
             android:text="@string/playAgain_button"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="@+id/scoreFinal"
-            app:layout_constraintStart_toStartOf="@+id/scoreFinal"
-            app:layout_constraintTop_toBottomOf="@+id/scoreFinal" />
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoreFinal"
+            app:layout_constraintVertical_bias="0.0" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

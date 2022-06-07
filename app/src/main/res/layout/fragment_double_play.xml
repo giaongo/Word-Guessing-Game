@@ -34,7 +34,7 @@
             app:layout_constraintTop_toBottomOf="@+id/wordTitle" />
 
         <TextView
-            android:id="@+id/timeDouble"
+            android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -50,15 +50,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:layout_marginBottom="10dp"
             android:fontFamily="@font/imprima"
             android:text="@string/score"
             android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/timeDouble"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="@+id/time"
             app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintStart_toStartOf="@+id/timeDouble"
-            app:layout_constraintTop_toBottomOf="@+id/timeDouble"
+            app:layout_constraintStart_toStartOf="@+id/time"
+            app:layout_constraintTop_toBottomOf="@+id/time"
             app:layout_constraintVertical_bias="0.26" />
 
         <Button

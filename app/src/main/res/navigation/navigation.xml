@@ -54,8 +54,4 @@
         android:id="@+id/gameInstructionFragment"
         android:name="fi.giao.wordguessinggame.title.GameInstructionFragment"
         android:label="GameInstructionFragment" />
-    <fragment
-        android:id="@+id/addWordFragment"
-        android:name="fi.giao.wordguessinggame.title.AddWordFragment"
-        android:label="AddWordFragment" />
 </navigation>
