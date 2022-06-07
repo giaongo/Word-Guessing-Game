@@ -1,5 +1,6 @@
 package fi.giao.wordguessinggame.ui
 
+import android.os.CountDownTimer
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -19,15 +20,39 @@ class WordViewModel (private val repository: WordRepository): ViewModel() {
     val wordDescription: LiveData<String>
         get() = _wordDescription
 
+    private  val _timer  = MutableLiveData<Long>()
+    val timer: LiveData<Long>
+        get() = _timer
+
+    private val _gameFinished = MutableLiveData<Boolean>()
+    val gameFinished: LiveData<Boolean>
+        get() = _gameFinished
+
     private var index  = -1
-    var wordList: List<WordItem>
+    private var wordList: List<WordItem>
 
-    fun getAllWordsItems() = repository.getAllWordItems()
+    private fun getAllWordsItems() = repository.getAllWordItems()
 
+    companion object {
+        const val TIMER  = 30000L
+        const val INTERVAL = 1000L
+        const val END = 0L
+    }
     init {
         _score.value = 0
+        _gameFinished.value = false
         wordList = getAllWordsItems().shuffled()
         nextWord()
+        object:  CountDownTimer(TIMER, INTERVAL){
+            override fun onTick(p0: Long) {
+                _timer.value = p0 / INTERVAL
+            }
+
+            override fun onFinish() {
+                _timer.value =  END
+                _gameFinished.value = true
+            }
+        }.start()
     }
     private fun nextWord() {
         if(index < (wordList.size.minus(1))) {
@@ -35,8 +60,8 @@ class WordViewModel (private val repository: WordRepository): ViewModel() {
         } else {
             index = 0
         }
-        _word.value =  wordList.get(index).word
-        _wordDescription.value = wordList.get(index).description
+        _word.value =  wordList[index].word
+        _wordDescription.value = wordList[index].description
     }
 
     fun onSkip()  {

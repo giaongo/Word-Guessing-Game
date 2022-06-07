@@ -1,11 +1,11 @@
 package fi.giao.wordguessinggame.game
 
 import android.os.Bundle
+import android.text.format.DateUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -34,23 +34,35 @@ class DoublePlayFragment : Fragment() {
         })
         wordViewModel.score.observe(viewLifecycleOwner, Observer {
             binding.scoreDouble.text = requireActivity().getString(R.string.score,it)
-            if(it ==  5) {
-                findNavController().navigate(DoublePlayFragmentDirections.actionDoublePlayFragmentToGameOverFragment(it))
-            }
         })
+        startTimeAndEnd()
         onCorrectButtonClicked()
         onSkipButtonClick()
         return binding.root
     }
+
     private fun  onCorrectButtonClicked() {
         binding.correctButton.setOnClickListener{
             wordViewModel.onCorrect()
         }
     }
+
     private fun onSkipButtonClick() {
         binding.skipButton.setOnClickListener{
             wordViewModel.onSkip()
         }
     }
 
+    private fun startTimeAndEnd() {
+        wordViewModel.timer.observe(viewLifecycleOwner, Observer {
+            binding.time.text = DateUtils.formatElapsedTime(it)
+        })
+        wordViewModel.gameFinished.observe(viewLifecycleOwner, Observer {
+            if(it) {
+                findNavController().navigate(DoublePlayFragmentDirections.actionDoublePlayFragmentToGameOverFragment(
+                    wordViewModel.score.value!!
+                ))
+            }
+        })
+    }
 }
