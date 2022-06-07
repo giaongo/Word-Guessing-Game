@@ -34,7 +34,7 @@ class WordViewModel (private val repository: WordRepository): ViewModel() {
     private fun getAllWordsItems() = repository.getAllWordItems()
 
     companion object {
-        const val TIMER  = 30000L
+        const val TIMER  = 60000L
         const val INTERVAL = 1000L
         const val END = 0L
     }
